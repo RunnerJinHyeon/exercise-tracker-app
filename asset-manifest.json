@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/exercise-tracker-app/static/css/main.43261c21.css",
+    "main.js": "/exercise-tracker-app/static/js/main.dca8cb2a.js",
+    "static/media/StartBackground.png": "/exercise-tracker-app/static/media/StartBackground.1d4d69064de9cd339a43.png",
+    "static/media/LoginImg.png": "/exercise-tracker-app/static/media/LoginImg.2fb8e2521c301aa808c9.png",
+    "static/media/userImg.png": "/exercise-tracker-app/static/media/userImg.0c29f32b94525efe4a20.png",
+    "index.html": "/exercise-tracker-app/index.html",
+    "main.43261c21.css.map": "/exercise-tracker-app/static/css/main.43261c21.css.map",
+    "main.dca8cb2a.js.map": "/exercise-tracker-app/static/js/main.dca8cb2a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43261c21.css",
+    "static/js/main.dca8cb2a.js"
+  ]
+}
