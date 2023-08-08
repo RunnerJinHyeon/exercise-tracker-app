@@ -31,6 +31,7 @@ const Login = () => {
                     <GoogleLogin />
                 </div>
             </button>
+            
         </main>
     )
 };

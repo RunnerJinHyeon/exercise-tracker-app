@@ -41,7 +41,7 @@ function App() {
       {/* 조건부로 Header를 렌더링 */}
       {showHeaderFooter() && <Header />}
       <Routes>
-        {/* <Route path="/" element={<Start />}></Route> */}
+        <Route path="/" element={<Start />}></Route>
         <Route path="/" element={<Login />}></Route>
         <Route path="/main" element={<Main />}></Route>
         <Route path="/to-record" element={<ToRecord />}></Route>
