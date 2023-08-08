@@ -1,30 +1,68 @@
 /* reset */
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 12px;
   line-height: 1.2;
   background: none repeat scroll 0 0 #fff;
 }
-h1, h2, h3, h4, h5, h6 {font-size:16px;}
-h1, h2, h3, h4, h5, h6, body, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquote, address, table, thead, tbody, tfoot, tr, td, caption {margin:0; padding:0;}
-li {list-style:none;}
-a {text-decoration: none;}
-*{margin-bottom:-1px ;}
-*{box-sizing :border-box;}
-
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+div,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+form,
+fieldset,
+blockquote,
+address,
+table,
+thead,
+tbody,
+tfoot,
+tr,
+td,
+caption {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+* {
+  margin-bottom: -1px;
+}
+* {
+  box-sizing: border-box;
+}
 
 /* ~ 1023 */
-@media screen and (max-width:1023px) {
-  
+@media screen and (max-width: 1023px) {
 }
 
 /* 1024 ~ 1399까지 */
-@media screen and (min-width:1024px) and (max-width: 1399px){
-
+@media screen and (min-width: 1024px) and (max-width: 1399px) {
 }
 
 /* 1400 ~ */
-@media screen and (min-width:1400px) {
-
+@media screen and (min-width: 1400px) {
 }

@@ -39,7 +39,6 @@ const MapContainer = ({ searchPlace }) => {
       level: 3,
     };
     const map = new kakao.maps.Map(container, options);
-
     const ps = new kakao.maps.services.Places();
 
     ps.keywordSearch(searchPlace, placesSearchCB);
@@ -71,8 +70,8 @@ const MapContainer = ({ searchPlace }) => {
         // 마커를 클릭시 장소명 인포윈도우에 표출
         infowindow.setContent(
           '<div style="padding:5px;font-ize:12px;">' +
-          place.place_name +
-          "</div>"
+            place.place_name +
+            "</div>"
         );
         infowindow.open(map, marker);
       });
@@ -81,19 +80,10 @@ const MapContainer = ({ searchPlace }) => {
 
   return (
     <>
-      <div
-        className="w-[300px] h-[300px]"
-        id="myMap"
-      ></div>
-      <div
-        id="result-list"
-        className=" overflow-y-auto h-[260px] pb-[24px];"
-      >
+      <div className="w-[300px] h-[300px]" id="myMap"></div>
+      <div id="result-list" className=" overflow-y-auto h-[260px] pb-[24px];">
         {Places.map((item, i) => (
-          <div
-            key={i}
-            className="mt-[20px] mx-[20px]"
-          >
+          <div key={i} className="mt-[20px] mx-[20px]">
             <div>
               <h5 className="mb-[5px]">
                 <span className="mr-[10px]">{i + 1}.</span>
@@ -106,22 +96,16 @@ const MapContainer = ({ searchPlace }) => {
                   {item.place_name}
                 </a>
               </h5>
-              {item.road_address_name
-                ? (
-                  <div>
-                    <span>{item.road_address_name}</span>
-                    <a href={item.place_url} target="_blank" rel="noreferrer"></a>
-                    <span>{item.address_name}</span>
-                  </div>
-                )
-                : (
+              {item.road_address_name ? (
+                <div>
+                  <span>{item.road_address_name}</span>
+                  <a href={item.place_url} target="_blank" rel="noreferrer"></a>
                   <span>{item.address_name}</span>
-                )}
-              <span
-                className="text-[#777]"
-              >
-                {item.phone}
-              </span>
+                </div>
+              ) : (
+                <span>{item.address_name}</span>
+              )}
+              <span className="text-[#777]">{item.phone}</span>
             </div>
           </div>
         ))}

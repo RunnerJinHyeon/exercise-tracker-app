@@ -1,9 +1,8 @@
-import { useEffect } from "react";
 import axios from "axios";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const KakaoUserInfo = ({ isLogin, setIsLogin }) => {
-  // const [userName, setUserName] = useState();
+function OAuth() {
   const navigate = useNavigate();
   useEffect(() => {
     const params = new URL(document.location.toString()).searchParams;
@@ -41,7 +40,6 @@ const KakaoUserInfo = ({ isLogin, setIsLogin }) => {
 
           .then((res) => {
             console.log("2번째", res);
-            setIsLogin(true);
             console.log(res.data.properties.nickname);
             sessionStorage.setItem("username", res.data.properties.nickname);
             navigate("./main");
@@ -50,8 +48,8 @@ const KakaoUserInfo = ({ isLogin, setIsLogin }) => {
       .catch((Error) => {
         console.log(Error);
       });
-  }, [setIsLogin]);
+  }, []);
+  return <div>OAuth</div>;
+}
 
-  return <></>;
-};
-export default KakaoUserInfo;
+export default OAuth;

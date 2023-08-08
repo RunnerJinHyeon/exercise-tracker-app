@@ -14,7 +14,8 @@ function ExerciseListView({ date }) {
 
   const today = new Date(now.getFullYear(), now.getMonth() + 1, now.getDate());
   const idx = (today.getTime() - start.getTime()) / (1000 * 60 * 60 * 24);
-  console.log(idx);
+  console.log(idx % routine.length);
+  console.log(typeof routine.length, typeof idx);
   const dispatch = useDispatch();
   return (
     <>
@@ -25,7 +26,10 @@ function ExerciseListView({ date }) {
         {idx < 0
           ? null
           : routine[idx % routine.length] !== undefined && (
-              <RoutineItem routine={routine[idx % routine.length]} idx={idx} />
+              <RoutineItem
+                routine={routine[idx % routine.length]}
+                idx={idx % routine.length}
+              />
             )}
         {data
           .filter((ele) => ele.date === date)
@@ -40,9 +44,8 @@ function ExerciseListView({ date }) {
 
               <button
                 className="text-base absolute right-5"
-                onClick={() => dispatch(deleteExercise(ele.id))
-
-                }>
+                onClick={() => dispatch(deleteExercise(ele.id))}
+              >
                 ❌
               </button>
             </li>

@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "homepage": "https://runnerjinhyeon.github.io/exercise-tracker-app/",
+=======
+  "homepage": "https://hanbinchoi.github.io/exercise-tracker-app/",
+>>>>>>> 6e194395071c7147982edd4e7a9d4daedbf5437c
   "name": "exercise-tracker-app",
   "version": "0.1.0",
   "private": true,
