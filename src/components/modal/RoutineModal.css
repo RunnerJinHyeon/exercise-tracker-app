@@ -1,0 +1,30 @@
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  background-color: white;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.content {
+  text-align: center;
+}
+form > div {
+  width: 180px;
+}
+div > input {
+  width: 120px;
+}
+.modal-close-btn {
+  margin-top: 20px;
+  background-color: tomato;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: white;
+  font-weight: 700;
+}

@@ -1,3 +1,5 @@
+import GoogleUserInfo from "./GoogleUserInfo";
+
 const SocialGoogle = () => {
     // API, URI 받아 오기
     // URL 설정
@@ -12,7 +14,10 @@ const SocialGoogle = () => {
 
     return (
         <>
-            <button onClick={GoogleLogin}>구글 로그인</button>
+            <button
+                onClick={GoogleLogin}
+                className="text-xl font-bold mx-5"
+            >구글 로그인</button>
         </>
     )
 }
