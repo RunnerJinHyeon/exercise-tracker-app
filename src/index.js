@@ -15,8 +15,8 @@ root.render(
     <Provider store={store}>
       {/* loading: 로딩과정에서 보여줄 컴포넌트, persisotr: 로컬스토리지에 저장할 스토어 */}
       <PersistGate loading={null} persistor={persistor}>
-        {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        {/* <BrowserRouter> */}
           <App />
         </BrowserRouter>
       </PersistGate>
