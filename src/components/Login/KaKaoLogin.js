@@ -21,7 +21,7 @@ const SocialKAKAO = () => {
       console.log(code);
       setCode(code)
 
-      navigate(`/Kakao/callback?code=${Code}`)
+      navigate(`/main?code=${Code}`)
     }
   },[navigate,code,Code])
   
