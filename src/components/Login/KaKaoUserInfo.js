@@ -1,19 +1,27 @@
-import { useEffect,} from "react";
+import { useEffect,useState } from "react";
 import axios from "axios"
 
 const KakaoUserInfo = ({isLogin,setIsLogin}) => {
     // const [userName, setUserName] = useState();
+    const [Code,setCode] = useState('');
+
+    useEffect(()=>{
+        const params = new URL(document.location.toString()).searchParams;
+        const code = params.get('code');
+        setCode(code)
+    },[])
+    
+    
     useEffect(() => {
         
 
-        const params = new URL(document.location.toString()).searchParams;
-        const code = params.get('code');
+        
         const grantType = "authorization_code";
         const CLIENT_ID = `${process.env.REACT_APP_REST_API_KEY}`
         const REDIRECT_URI = `${process.env.REACT_APP_REST_API_URI}`
 
         axios.post(
-            `https://kauth.kakao.com/oauth/token?grant_type=${grantType}&client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&code=${code}`,
+            `https://kauth.kakao.com/oauth/token?grant_type=${grantType}&client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&code=${Code}`,
             {},
             { headers: { "Content-type": "application/x-www-form-urlencoded;charset=utf-8" } }
         )
@@ -44,7 +52,7 @@ const KakaoUserInfo = ({isLogin,setIsLogin}) => {
             .catch((Error) => {
                 console.log(Error)
             })
-    }, [setIsLogin])
+    }, [setIsLogin,Code])
 
     return (
         <>
