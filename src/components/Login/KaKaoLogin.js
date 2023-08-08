@@ -16,14 +16,18 @@ const SocialKAKAO = () => {
     window.location.href = KAKAO_AUTH_URL;
   }
 
-  useEffect(()=>{
-    if(code?.length>1){
-      console.log(code);
-      setCode(code)
-
-      navigate(`/main?code=${Code}`)
+  useEffect(() => {
+    if (code?.length > 1) {
+      setCode(code);
     }
-  },[navigate,code,Code])
+  }, [code]);
+
+  useEffect(() => {
+    if (Code) {
+      console.log(Code);
+      navigate(`/main?code=${Code}`);
+    }
+  }, [Code, navigate]);
   
   return (
     <>
